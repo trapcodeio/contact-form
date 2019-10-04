@@ -1,15 +1,9 @@
-# Xpresser Example App
+# Contact Form
+
+Config your stmp settings in `config.js`
 
 ![Alt text](https://cdn.jsdelivr.net/npm/xpresser/xpresser-logo-black.png "Xpresser Logo")
  
-Example app using `ejs` templates, Showing a simple view but also has guides in code comments
-
-For same example using `edge.js` templates, similar to laravel blade and faster - [Xpresser Example App Using Edge.js](https://github.com/xpresserjs/new-app-edge-js)
-
-### Includes 
-Xpresser Default Page using [Bulma.io](https://bulma.io) & [Bootstrap](https://getbootstrap.com)
-Theme can be changed in `app.js`
-
 ### Use
 1. Clone Or Download
 2. Run `yarn` or `npm` install. (yarn preferably).
