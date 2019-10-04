@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title><%= ctx.config('name') %></title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+          integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        body {
+            background-color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <div class="col-12 col-8-lg offset-2-lg">
+        <div class="card mt-5 shadow">
+            <div class="card-body">
+                <h2>Contact Form</h2>
+                <hr class="m-0">
+
+                <!--  show Success message -->
+                <% if(ctx.$flash.success) { %>
+                    <div class="alert alert-success mt-2" role="alert">
+                        <%= ctx.$flash.success %>
+                    </div>
+                <% } %>
+
+                <!--  show error message -->
+                <% if(ctx.$flash.error) { %>
+                    <div class="alert alert-danger mt-2" role="alert">
+                        <%= ctx.$flash.error %>
+                    </div>
+                <% } %>
+
+                <form class="mt-3" method="post" action="<%= ctx.route('contact.submit') %>">
+                    <div class="form-group">
+                        <label for="contact-email">Email:</label>
+                        <input type="text" name="email" id="contact-email" class="form-control"
+                               placeholder="mail@example.com"
+                               aria-describedby="" value="<%= random.email %>">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-name">Name:</label>
+                        <input type="text" name="name" id="contact-name" class="form-control"
+                               placeholder="John Doe" value="<%= random.name %>"
+                               aria-describedby="">
+                    </div>
+                    <div class="form-group">
+                        <label for="contact-message">Message</label>
+                        <textarea name="message" id="contact-message" rows="5"
+                                  class="form-control"><%= random.message %></textarea>
+                    </div>
+                    <div class="mt-3">
+                        <button type="submit" class="btn btn-success btn-lg">Send Message</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

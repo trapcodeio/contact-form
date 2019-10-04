@@ -1,0 +1,21 @@
+{
+  "name": "new-xjs-project",
+  "version": "1.0.0",
+  "description": "New Xpresser Project",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "repository": "https://github.com/xpresserjs/new-app.git",
+  "author": "xpresserjs",
+  "license": "MIT",
+  "dependencies": {
+    "nodemailer": "^6.3.0",
+    "xpresser": "^0.1.30"
+  },
+  "devDependencies": {
+    "chance": "^1.1.0",
+    "nodemon": "^1.19.3"
+  }
+}
