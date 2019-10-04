@@ -41,18 +41,18 @@
                         <label for="contact-email">Email:</label>
                         <input type="text" name="email" id="contact-email" class="form-control"
                                placeholder="mail@example.com"
-                               aria-describedby="" value="<%= random.email %>">
+                               aria-describedby="" value="<%= random.email %>" required>
                     </div>
                     <div class="form-group">
                         <label for="contact-name">Name:</label>
                         <input type="text" name="name" id="contact-name" class="form-control"
                                placeholder="John Doe" value="<%= random.name %>"
-                               aria-describedby="">
+                               aria-describedby="" required>
                     </div>
                     <div class="form-group">
                         <label for="contact-message">Message</label>
                         <textarea name="message" id="contact-message" rows="5"
-                                  class="form-control"><%= random.message %></textarea>
+                                  class="form-control" required><%= random.message %></textarea>
                     </div>
                     <div class="mt-3">
                         <button type="submit" class="btn btn-success btn-lg">Send Message</button>
